@@ -1,4 +1,5 @@
-#file -- spieler.py --
-#file -- szenarien.py --
-
 print("Hello, World!")
+
+# Hauptschleife
+while True:
+    xxx
