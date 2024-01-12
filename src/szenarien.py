@@ -1,5 +1,5 @@
-print("Hello, World!")
+import spieler
 
-# Szenarien if Funktionen
+# Szenarien in Funktionen
 def xyz():
 	xxx

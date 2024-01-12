@@ -1,5 +1,12 @@
+import spieler
+import szenario
+
+# SETUP
 print("Hello, World!")
 
-# Hauptschleife
+# HAUPTSCHLEIFE
 while True:
     xxx
+
+# CLEANUP
+print("Ende")
