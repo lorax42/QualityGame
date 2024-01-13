@@ -1,12 +1,17 @@
-import spieler
-import szenario
+import spieler as p
+import szenario as s
 
 # SETUP
-print("Hello, World!")
+# Spieler und Umfeld aufstellen
+# Einführende Geschichte
 
 # HAUPTSCHLEIFE
 while True:
-    xxx
+    # Szenario stellen
+    # Antwort verarbeiten
+    # Spieler und Umfeld anpassen
+    # Konsequenzen ziehen
 
 # CLEANUP
-print("Ende")
+# offene Enden aufheben
+# Geschichte beenden
