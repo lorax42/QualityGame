@@ -7,12 +7,11 @@ import szenario as s
 
 # HAUPTSCHLEIFE
 while True:
-    print(p.level)
-    print(s.xyz())
-    # Szenario stellen
+    print(p.level) # Situation anzeigen
+    print(s.xyz()) # Szenario stellen
+    # Konsequenzen ziehen
     # Antwort verarbeiten
     # Spieler und Umfeld anpassen
-    # Konsequenzen ziehen
 
 # CLEANUP
 # offene Enden aufheben
