@@ -2,4 +2,5 @@ import spieler
 
 # Szenarien in Funktionen
 def xyz():
-	# Szenarien
+	# ...
+    print("Szenario xyz")
