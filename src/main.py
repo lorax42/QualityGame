@@ -7,6 +7,8 @@ import szenario as s
 
 # HAUPTSCHLEIFE
 while True:
+    print(p.level)
+    print(s.xyz())
     # Szenario stellen
     # Antwort verarbeiten
     # Spieler und Umfeld anpassen
