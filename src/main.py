@@ -1,4 +1,4 @@
-import spieler as p
+import charakter as c
 import szenario as s
 
 # SETUP
@@ -7,7 +7,7 @@ import szenario as s
 
 # HAUPTSCHLEIFE
 while True:
-    print(p.level) # Situation anzeigen
+    print(c.level) # Situation anzeigen
     print(s.xyz()) # Szenario stellen
     # Konsequenzen ziehen
     # Antwort verarbeiten
