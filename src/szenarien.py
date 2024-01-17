@@ -1,4 +1,4 @@
-import spieler
+import charakter
 
 # Szenarien in Funktionen
 def xyz():
