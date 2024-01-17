@@ -2,7 +2,7 @@ import charakter as c
 import szenario as s
 
 # SETUP
-# Spieler und Umfeld aufstellen
+# Charakter und Umfeld aufstellen
 # Einführende Geschichte
 
 # HAUPTSCHLEIFE
@@ -11,7 +11,7 @@ while True:
     print(s.xyz()) # Szenario stellen
     # Konsequenzen ziehen
     # Antwort verarbeiten
-    # Spieler und Umfeld anpassen
+    # Charakter und Umfeld anpassen
 
 # CLEANUP
 # offene Enden aufheben
