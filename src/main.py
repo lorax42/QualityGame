@@ -9,8 +9,8 @@ import szenario as s
 while True:
     print(c.level) # Situation anzeigen
     print(s.xyz()) # Szenario stellen
-    # Konsequenzen ziehen
     # Antwort verarbeiten
+    # Konsequenzen ziehen
     # Charakter und Umfeld anpassen
 
 # CLEANUP
