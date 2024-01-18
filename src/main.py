@@ -1,5 +1,5 @@
 import charakter as c
-import szenario as s
+import szenarien as s
 
 # SETUP
 # Charakter und Umfeld aufstellen
@@ -16,3 +16,4 @@ while True:
 # CLEANUP
 # offene Enden aufheben
 # Geschichte beenden
+# ENDE
