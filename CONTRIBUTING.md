@@ -7,3 +7,5 @@ Für **neue Features** bitte einen neuen **branch** mit passendem Namen anlegen.
 Bitte **keine Commits** auf dem **main** branch.
 
 An die **Mods**: Nur **mergen**, wenn du den Code verstanden hast und dir sicher bist, dass es funktioniert!
+
+**DIESE REPOSITORY IST NICHT AKTUELL**
