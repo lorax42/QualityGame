@@ -18,6 +18,8 @@ u.logMssg("START",0,0)
 u.clear() # Terminal reinigen
 
 # Charakter und Umfeld aufstellen
+u.logo()
+
 c.name=str(input("Dein Nachname: "))
 c.vorname=str(input("Dein Vorname: "))
 c.level=10
