@@ -5,70 +5,70 @@ import charakter as c
 # ERROR: undefinierte Wahl eines Szenarios
 def errorWahlSzenario(szenario,wahl):
     print("ERROR: undefinierte Wahl eines Szenarios\nSzenario=%s\nwahl=%d" %(szenario,wahl))
+    return 0
+
+def errorSzenario(szenario,wahl):
+    print("ERROR: in einem Szenario\nSzenario=%s\nwahl=%d" %(szenario,wahl))
+    return 0
+
+def undefError(szenario,error):
+    print("ERROR: undefinierter error in szenario=%s\nerror=%d" %(szenario,error))
+    return 0
 
 # zufällige Szenarienwahl
 def szenario():
     wahl=random.randint(0,100000)%2 # Endwert gleich der Anzahl an Szenarien
     
     if wahl==0:
-        szenario1()
-    elif wahl==1:
-        szenario2()
-    elif wahl==2:
-        szenario3()
+        x=szenario1()
+    #elif wahl==1:
+        #x=szenario2()
+    #elif wahl==2:
+        #x=szenario3()
     else:
         errorWahlSzenario("szenario",wahl)
+        return 1
+    
+    # Error checking
+    if x==0:
+        return 0
+    elif x==1:
+        errorSzenario("szenario",wahl)
+        return 1
+    elif x==2: # für dieses Szenario unqualifiziert
+        szenario()
+        return 0
+    else:
+        undefError("szenario",x)
+        return 1
+    
+    return 0
 
 ###SZENARIEN###
 
 # Szenario 1
 def szenario1():
     if c.level<2:
-        return
+        return 2
     
     print("Du kommst nach Hause. Was machst du?\n1) Dich entspannen und Chips essen\n2) An Deinem Buch weiterschreiben\n3) Dein Everyone Profil updaten")
     wahl=int(input("> "))
 
     if wahl==1:
-        c.addPunkte(-5)
+        x=c.addPunkte(-5)
     elif wahl==2:
-        c.addPunkte(-3)
+        x=c.addPunkte(-3)
     elif wahl==3:
-        c.addPunkte(5)
+        x=c.addPunkte(5)
     else:
         errorWahlSzenario("szenario1",wahl)
-        
-# Szenario 2
-def szenario2():
-    if c.level<5:
-        return
+        return 1
     
-    print("Du kommst nach Hause. Was machst du?\n1) Dich entspannen und Chips essen\n2) An Deinem Buch weiterschreiben\n3) Dein Everyone Profil updaten")
-    wahl=int(input("> "))
-
-    if wahl==1:
-        c.addPunkte(-5)
-    elif wahl==2:
-        c.addPunkte(-3)
-    elif wahl==3:
-        c.addPunkte(5)
+    if x==0:
+        return 0
+    elif x==1:
+        errorSzenario("szenario1",wahl)
     else:
-        errorWahlSzenario("szenario2",wahl)
-        
-# Szenario 3
-def szenario3():
-    if c.level<10:
-        return
+        undefError("szenario1",x)
     
-    print("Du kommst nach Hause. Was machst du?\n1) Dich entspannen und Chips essen\n2) An Deinem Buch weiterschreiben\n3) Dein Everyone Profil updaten")
-    wahl=int(input("> "))
-
-    if wahl==1:
-        c.addPunkte(-5)
-    elif wahl==2:
-        c.addPunkte(-3)
-    elif wahl==3:
-        c.addPunkte(5)
-    else:
-        errorWahlSzenario("szenario3",wahl)
-        
+    return 0
