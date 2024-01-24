@@ -17,7 +17,8 @@ def undefError(szenario,error):
 
 # zufällige Szenarienwahl
 def szenario():
-    wahl=random.randint(0,100000)%2 # Endwert gleich der Anzahl an Szenarien
+    numSzenario=3 # Anzahl der Szenarien
+    wahl=random.randint(0,100000)%(numSzenario-1)
     
     if wahl==0:
         x=szenario1()
