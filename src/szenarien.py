@@ -1,24 +1,28 @@
 import random
 
 import charakter as c
+import utils as u
 
 # ERROR: undefinierte Wahl eines Szenarios
 def errorWahlSzenario(szenario,wahl):
-    print("ERROR: undefinierte Wahl eines Szenarios\nSzenario=%s\nwahl=%d" %(szenario,wahl))
+    #print("ERROR: undefinierte Wahl eines Szenarios\nSzenario=%s\nwahl=%d" %(szenario,wahl))
+    u.logMssg("ERROR: undefinierte Wahl eines Szenarios\nSzenario="+str(szenario)+"\nwahl="+str(wahl),1,1)
     return 0
 
 def errorSzenario(szenario,wahl):
-    print("ERROR: in einem Szenario\nSzenario=%s\nwahl=%d" %(szenario,wahl))
+    #print("ERROR: in einem Szenario\nSzenario=%s\nwahl=%d" %(szenario,wahl))
+    u.logMssg("ERROR: in einem Szenario\nSzenario="+str(szenario)+"\nwahl="+str(wahl),1,1)
     return 0
 
 def undefError(szenario,error):
-    print("ERROR: undefinierter error in szenario=%s\nerror=%d" %(szenario,error))
+    #print("ERROR: undefinierter error in szenario=%s\nerror=%d" %(szenario,error))
+    u.logMssg("ERROR: undefinierter error in szenario="+str(szenario),error,1)
     return 0
 
 # zufällige Szenarienwahl
 def szenario():
-    numSzenario=3 # Anzahl der Szenarien
-    wahl=random.randint(0,100000)%(numSzenario-1)
+    numSzenario=1 # Anzahl der Szenarien
+    wahl=random.randint(0,100000)%numSzenario#(numSzenario-1)
     
     if wahl==0:
         x=szenario1()

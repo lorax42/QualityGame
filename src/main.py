@@ -6,24 +6,16 @@ import os
 
 import charakter as c
 import szenarien as s
-
-# Terminal reinigen
-def clear():
- 
-    # for windows
-    if os.name == 'nt':
-        _ = os.system('cls')
- 
-    # for mac and linux(here, os.name is 'posix')
-    elif os.name == 'posix':
-        _ = os.system('clear')
-    
-    else:
-        print("ERROR: undefinierter Systemtyp: ",os.name)
+import utils as u
 
 # SETUP
 
-clear() # Terminal reinigen
+if os.path.exists("log.txt"):
+  os.remove("log.txt")
+
+u.logMssg("START",0,0)
+
+u.clear() # Terminal reinigen
 
 # Charakter und Umfeld aufstellen
 c.name=str(input("Dein Nachname: "))
@@ -38,7 +30,7 @@ runde=0 # Zähler
 while True:
     runde+=1 # Rundenanzähler inkrementieren
 
-    clear() # Terminal reinigen
+    u.clear() # Terminal reinigen
     
     # Situation anzeigen
     print(c.vorname,c.name)
@@ -51,7 +43,9 @@ while True:
 
     x=s.szenario() # Szenario stellen
     if x!=0:
-        print("ERROR: in Funktion szenario()\nerror=%d" %(x))
+        # print("ERROR: in Funktion szenario()\nerror=%d" %(x))
+        u.logMssg("ERROR: in Funktion szenario() (von main aus gesendet)",x,1)
+        # runde-=1
 
     # (Antwort verarbeiten)
     # Konsequenzen ziehen
@@ -65,7 +59,7 @@ while True:
 
 # CLEANUP
 
-clear() # Terminal reinigen
+u.clear() # Terminal reinigen
 
 # Stats anzeigen
 print("Du hast")
@@ -84,5 +78,6 @@ print("Dieses Projekt steht unter der MIT-Lizenz. Mit dem source code dieses Spi
 
 time.sleep(5)
 print("\nENDE")
+u.logMssg("ENDE",0,0)
 
 # ENDE
