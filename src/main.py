@@ -28,7 +28,7 @@ def clear():
 c.name=str(input("Dein Nachname: "))
 c.vorname=str(input("Dein Vorname: "))
 c.level=10
-c.punkte=50
+c.punkte=c.level*100
 
 # Einführende Geschichte
 
@@ -48,8 +48,10 @@ while True:
 
     time.sleep(1)
 
-    s.szenario() # Szenario stellen
-    
+    x=s.szenario() # Szenario stellen
+    if x!=0:
+        print("ERROR: in Funktion szenario()\nerror=%d" %(x))
+
     # (Antwort verarbeiten)
     # Konsequenzen ziehen
     # Charakter und Umfeld anpassen
