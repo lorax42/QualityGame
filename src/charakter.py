@@ -63,7 +63,9 @@ def addPunkte(num):
     elif num < 0:
         print("### %d Punkte ###" %(num))
     else:
+        print("EEROR: undefinierte Zahl=%d" %(num))
         return 1
+    
     time.sleep(2)
     
     return 0
