@@ -61,6 +61,7 @@ while True:
 # CLEANUP
 
 u.clear() # Terminal reinigen
+u.logo()
 
 # Stats anzeigen
 print("Du hast")
