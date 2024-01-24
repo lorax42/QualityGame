@@ -23,8 +23,9 @@ def clear():
 
 # SETUP
 
-# Charakter und Umfeld aufstellen
+clear() # Terminal reinigen
 
+# Charakter und Umfeld aufstellen
 c.name=str(input("Dein Nachname: "))
 c.vorname=str(input("Dein Vorname: "))
 c.level=10
