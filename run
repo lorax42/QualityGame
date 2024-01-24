@@ -1,0 +1,6 @@
+#! /usr/bin/bash
+# FOR LINUX ONLY
+
+cd src/
+python3 main.py
+echo $?
