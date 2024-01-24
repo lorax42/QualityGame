@@ -1,6 +1,6 @@
-# Charakter als Modul (statt Klasse)
-
 import time
+
+import utils as u
 
 # Attribute
 name=""
@@ -63,7 +63,8 @@ def addPunkte(num):
     elif num < 0:
         print("### %d Punkte ###" %(num))
     else:
-        print("EEROR: undefinierte Zahl=%d" %(num))
+        #print("EEROR: undefinierte Zahl=%d" %(num))
+        u.logMssg("EEROR: undefinierte Zahl="+num,1,1)
         return 1
     
     time.sleep(2)
