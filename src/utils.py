@@ -31,6 +31,5 @@ def clear():
         _ = os.system('clear')
     
     else:
-        #print("ERROR: undefinierter Systemtyp: ",os.name)
         logMssg("ERROR: undefinierter Systemtyp: "+os.name,1,1)
         return 1

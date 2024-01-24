@@ -43,7 +43,6 @@ while True:
 
     x=s.szenario() # Szenario stellen
     if x!=0:
-        # print("ERROR: in Funktion szenario()\nerror=%d" %(x))
         u.logMssg("ERROR: in Funktion szenario() (von main aus gesendet)",x,1)
         # runde-=1
 
