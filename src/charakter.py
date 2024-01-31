@@ -5,7 +5,7 @@ import utils as u
 # Attribute
 name=""
 vorname=""
-punkte=0
+punkte=0 # SUMME UB!
 level=0
 
 # Unterbereiche
@@ -67,5 +67,35 @@ def addPunkte(num):
         return 1
     
     time.sleep(2)
+    # Utils
+    return 0
+
+# setzt alle Unterbereiche in ub auf eine Punktzahl num
+def setAllUb(num):
+    global ub
+
+    for i in ub:
+        ub[i]=num
     
+    return 0
+
+# gibt Summe der Punkte des Inputs
+def sumUb():
+    global punkte,ub
+    punkte=0
+
+    for i in ub:
+        punkte+=ub[i]
+    
+    return 0
+
+# berechnet Level durch Punktzahl in ub
+def calcLevel():
+    global level,ub,punkte
+
+    level=len(ub)/100 *punkte+ (1000-len(ub))/100 *punkte # berechnet Level aus Punkten
+    # level = 0.42  *  total Pkt.     +      0.58   *   total Pkt.
+
+    level=10
+
     return 0

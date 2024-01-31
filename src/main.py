@@ -8,6 +8,11 @@ import charakter as c
 import szenarien as s
 import utils as u
 
+# list of scenarios
+# levels : [scenarios]
+levels = [s.scenario("", "")]
+
+
 # SETUP
 
 if os.path.exists("log.txt"):
@@ -22,8 +27,9 @@ u.logo()
 
 c.name=str(input("Dein Nachname: "))
 c.vorname=str(input("Dein Vorname: "))
-c.level=10
-c.punkte=c.level*100
+c.setAllUb(10)
+c.punkte=c.sumUb()
+c.level=c.calcLevel()
 
 # Einführende Geschichte
 
@@ -33,6 +39,8 @@ while True:
     runde+=1 # Rundenanzähler inkrementieren
 
     u.clear() # Terminal reinigen
+
+    c.level=c.calcLevel()
     
     # Situation anzeigen
     print(c.vorname,c.name)
@@ -43,10 +51,12 @@ while True:
 
     time.sleep(1)
 
-    x=s.szenario() # Szenario stellen
-    if x!=0:
-        u.logMssg("ERROR: in Funktion szenario() (von main aus gesendet)",x,1)
-        # runde-=1
+    # x=s.szenario() # Szenario stellen
+    # if x!=0:
+    #     u.logMssg("ERROR: in Funktion szenario() (von main aus gesendet)",x,1)
+    #     # runde-=1
+
+    levels[runde].call()
 
     # (Antwort verarbeiten)
     # Konsequenzen ziehen
