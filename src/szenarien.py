@@ -123,7 +123,7 @@
 #
 
 import utils as u
-import character as c
+import charakter as c
 
 class scenario:
     scenes = []
