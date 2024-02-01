@@ -20,18 +20,9 @@ def undefError(szenario,error):
 def szenario():
     sID=0 # szenario ID
 
-    numSzenario=1 # Anzahl der Szenarien
-    wahl=random.randint(0,100000)%numSzenario
-    
-    if wahl==0:
-        x=szenario1()
-    # elif wahl==1:
-        # x=szenario2()
-    # elif wahl==2:
-        # x=szenario3()
-    else:
-        errorWahlSzenario(sID,wahl)
-        return 1
+    szenarien={szenario1} # liste der Szenarien
+    szen=random.choice(szenarien) # szen ist ein zufälliges Szenario
+    x=szen() # szen wird ausgeführt
     
     # Error checking
     if x==0:

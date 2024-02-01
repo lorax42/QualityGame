@@ -20,10 +20,12 @@ u.clear() # Terminal reinigen
 # Charakter und Umfeld aufstellen
 u.logo()
 
+# Variablen setzen
 c.name=str(input("Dein Nachname: "))
 c.vorname=str(input("Dein Vorname: "))
-c.level=10
-c.punkte=c.level*100
+c.setUb(10) # setzt alle Werte von ub auf 10, also auch das durchschnittliche Level
+c.setPunkte() # berechnet die Punkte
+c.setLevel() # berechnet das Level
 
 # Einführende Geschichte
 
@@ -33,10 +35,13 @@ while True:
     runde+=1 # Rundenanzähler inkrementieren
 
     u.clear() # Terminal reinigen
+
+    c.setPunkte() # berechnet die Punkte neu
+    c.setLevel() # berechnet das Level neu
     
     # Situation anzeigen
     print(c.vorname,c.name)
-    print("Level:",c.level)
+    print("Level:",int(c.level))
     print("Punkte:",c.punkte)
     print("###",runde)
     print()
