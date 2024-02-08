@@ -34,17 +34,7 @@ runde=0 # Zähler
 while True:
     runde+=1 # Rundenanzähler inkrementieren
 
-    u.clear() # Terminal reinigen
-
-    c.setPunkte() # berechnet die Punkte neu
-    c.setLevel() # berechnet das Level neu
-    
-    # Situation anzeigen
-    print(c.vorname,c.name)
-    print("Level:",int(c.level))
-    print("Punkte:",c.punkte)
-    print("###",runde)
-    print()
+    u.update(runde)
 
     time.sleep(1)
 

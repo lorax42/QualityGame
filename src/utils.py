@@ -1,6 +1,8 @@
 import datetime
 import os
 
+import charakter as c
+
 # Lognachricht schreiben
 def logMssg(message,error,p):
     message=str(message)
@@ -33,6 +35,18 @@ def clear():
     else:
         logMssg("ERROR: undefinierter Systemtyp: "+os.name,1,1)
         return 1
+
+def update(runde):
+    clear() # Terminal reinigen
+    c.setPunkte() # berechnet die Punkte neu
+    c.setLevel() # berechnet das Level neu
+    
+    # Situation anzeigen
+    print(c.vorname,c.name)
+    print("Level:",int(c.level))
+    print("Punkte:",c.punkte)
+    print("###",runde)
+    print()
 
 def logo():
     print(r"""
