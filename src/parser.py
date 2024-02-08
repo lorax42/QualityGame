@@ -1,4 +1,4 @@
-import os
+# import os
 
 # Tokens
 LPAREN      ="("
@@ -29,10 +29,12 @@ def fread(file):
     file.close()
 
 # Pfad zu Szenarien
-dir_path=os.path.dirname(os.path.abspath(__file__))+"/szenarien"
+# dir_path=os.path.dirname(os.path.abspath(__file__))+"/szenarien"
+# 
+# for root,dirs,files in os.walk(dir_path):
+#     for file in files:
+#         if file.endswith(".txt"):
+#             print(root+"/"+str(file))
+#             fread("szenarien/"+file)
 
-for root,dirs,files in os.walk(dir_path):
-    for file in files:
-        if file.endswith(".txt"):
-            print(root+"/"+str(file))
-            fread("szenarien/"+file)
+fread("szenarien/szenarien.txt")
