@@ -16,6 +16,14 @@ def undefError(szenario,error):
     u.logMssg("ERROR: undefinierter error in szenario="+str(szenario),error,1)
     return 0
 
+def checkSzenError(x,sID,wahl):
+    if x==0:
+        return 0
+    elif x==1:
+        errorSzenario(sID,wahl)
+    else:
+        undefError(sID,x)
+
 # zufällige Szenarienwahl
 def szenario():
     sID=0 # szenario ID
@@ -66,5 +74,57 @@ def szenario1():
         errorSzenario(sID,wahl)
     else:
         undefError(sID,x)
+    
+    return 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Szenario 1
+def szenario2():
+    sID=1 # szenario ID
+    if c.level<2:
+        return 2
+
+
+
+
+
+
+
+
+
+    
+    print("Du kommst nach Hause. Was machst du?\n1) Dich entspannen und Chips essen\n2) An Deinem Buch weiterschreiben\n3) Dein Everyone Profil updaten")
+
+    wahl=int(input("> "))
+
+    if wahl==1:
+        x=c.addPunkte("disziplin",-5)
+    elif wahl==2:
+        x=c.addPunkte("gesundheit",-3)
+    elif wahl==3:
+        x=c.addPunkte("antwortgeschwindigkeit",5)
+    else:
+        errorWahlSzenario(sID,wahl)
+        return 1
+
+
+
+
+
+
+
+
+    checkSzenError(x,sID,wahl)
     
     return 0
