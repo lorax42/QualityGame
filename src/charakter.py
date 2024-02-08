@@ -49,7 +49,7 @@ ub={
     "mobilität":0,
     "kritikfähigkeit":0,
     "auslandserfahrung":0,
-    "antwortgeschwindigkeit":0, # und -rate in sozialen Netzwerken
+    "antwortrate":0, # und -rate in sozialen Netzwerken
     "konsumaufgeschlossenheit":0,
     "stressresistenz":0,
     "disziplin":0,
