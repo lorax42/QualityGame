@@ -2,7 +2,6 @@ import random
 
 import charakter as c
 import utils as u
-import main as m
 
 # ERROR: undefinierte Wahl eines Szenarios
 def errorWahlSzenario(szenario,wahl):
@@ -105,7 +104,7 @@ Plötzlich vibriert Dein QualityPad und leuchtet auf, sodass Dein Blick zu ihm g
     """)
 
     wahl1=int(input("> "))
-    u.update(m.runde)
+    c.update()
 
     if wahl1==1:
 
@@ -127,7 +126,7 @@ Vielleicht sind es aber auch nur Deine Eltern, die wissen wollen wie es Dir geht
         """)
 
         wahl2=int(input("> "))
-        u.update(m.runde)
+        c.update()
 
         if wahl2==1:
 
@@ -150,7 +149,7 @@ Mhm… ein wenig Hunger hast Du ja schon. Und nun auch wesentlich gesünder!
             """)
 
             wahl3=int(input("> "))
-            u.update(m.runde)
+            c.update()
 
             if wahl3==1:
 
@@ -179,7 +178,7 @@ Deinem Bürofenster angekommen ist, ehe Du Dich genüsslich über die Snacks her
                 """)
 
                 input()
-                u.update(m.runde)
+                c.update()
 
             elif wahl3==2:
 
@@ -201,7 +200,7 @@ Schnell wendest Du Dich wieder Deiner Arbeit zu.
                 """)
 
                 input()
-                u.update(m.runde)
+                c.update()
             
             else:
                 errorWahlSzenario(sID,wahl3)
@@ -210,10 +209,10 @@ Schnell wendest Du Dich wieder Deiner Arbeit zu.
         elif wahl2==2:
 
             x=c.addPunkte("produktivität",10)
-            checkSzenError(x,sID,wahl3)
+            checkSzenError(x,sID,wahl2)
 
             x=c.addPunkte("antwortrate",-20)
-            checkSzenError(x,sID,wahl3)
+            checkSzenError(x,sID,wahl2)
 
             print("""
 endlich weiterarbeiten!(+Produktivität; -Antw-rate i. soz. Med.):
@@ -222,7 +221,7 @@ Auch wenn die Versuchung schon groß ist….
             """)
 
             input()
-            u.update(m.runde)
+            c.update()
 
         else:
             errorWahlSzenario(sID,wahl2)
@@ -250,7 +249,7 @@ Mhm… ein wenig Hunger hast Du ja schon. Und nun auch wesentlich gesünder!
         """)
 
         wahl3=int(input("> "))
-        u.update(m.runde)
+        c.update()
 
         if wahl3==1:
 
@@ -279,7 +278,7 @@ Deinem Bürofenster angekommen ist, ehe Du Dich genüsslich über die Snacks her
                 """)
 
             input()
-            u.update(m.runde)
+            c.update()
 
         elif wahl3==2:
 
@@ -301,7 +300,7 @@ Schnell wendest Du Dich wieder Deiner Arbeit zu.
                 """)
 
             input()
-            u.update(m.runde)
+            c.update()
             
         else:
             errorWahlSzenario(sID,wahl3)

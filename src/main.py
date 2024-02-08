@@ -34,7 +34,8 @@ runde=0 # Zähler
 while True:
     runde+=1 # Rundenanzähler inkrementieren
 
-    u.update(runde)
+    c.update()
+    print("###",runde)
 
     time.sleep(1)
 
@@ -60,8 +61,8 @@ u.logo()
 
 # Stats anzeigen
 print("Du hast")
-print("Level",c.level,"erreicht")
-print(c.punkte,"Punkte gesammelt")
+print("Level",int(c.level),"erreicht")
+print(int(c.punkte),"Punkte gesammelt")
 print(runde,"Runden überlebt")
 print()
 

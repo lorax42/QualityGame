@@ -204,7 +204,14 @@ def setLevel():
 
     return 0
 
-### Test
-# setUb(10)
-# calcLevel()
-# print(level)
+def update():
+    u.clear() # Terminal reinigen
+    setPunkte() # berechnet die Punkte neu
+    setLevel() # berechnet das Level neu
+    
+    # Situation anzeigen
+    print(vorname,name)
+    print("Level:",int(level))
+    print("Punkte:",punkte)
+    # print("###",runde)
+    print()
