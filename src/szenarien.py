@@ -20,7 +20,7 @@ def undefError(szenario,error):
 def szenario():
     sID=0 # szenario ID
 
-    szenarien={szenario1} # liste der Szenarien
+    szenarien=[szenario1] # liste der Szenarien
     szen=random.choice(szenarien) # szen ist ein zufälliges Szenario
     x=szen() # szen wird ausgeführt
     
@@ -28,7 +28,7 @@ def szenario():
     if x==0:
         return 0
     elif x==1:
-        errorSzenario(sID,wahl)
+        errorSzenario(sID,szen)
         return 1
     elif x==2: # für dieses Szenario unqualifiziert
         szenario()
@@ -51,11 +51,11 @@ def szenario1():
     wahl=int(input("> "))
 
     if wahl==1:
-        x=c.addPunkte(-5)
+        x=c.addPunkte("disziplin",-5)
     elif wahl==2:
-        x=c.addPunkte(-3)
+        x=c.addPunkte("gesundheit",-3)
     elif wahl==3:
-        x=c.addPunkte(5)
+        x=c.addPunkte("antwortgeschwindigkeit",5)
     else:
         errorWahlSzenario(sID,wahl)
         return 1
