@@ -51,7 +51,7 @@ while True:
     # Endbedingungen
     if c.level<=2: # zu niedriges Level
         break
-    elif runde>=10: # maximale Rundenzahl erreicht
+    elif runde>=5: # maximale Rundenzahl erreicht
         break
 
 # CLEANUP
@@ -68,6 +68,16 @@ print()
 
 # offene Enden aufheben
 # Geschichte beenden
+print("""
+Du wirst von einer Bande nutzloser ermordet.
+""")
+
+if int(c.level >= 10):
+    print("Sie werden in kurzer Zeit gefasst und verurteilt.")
+else:
+    print("Da dein Level zu niedrig war, hat die Polizei nach kurzer Zeit die Nachforschungen eingestellt.")
+
+print()
 
 # Abspann
 time.sleep(5)
