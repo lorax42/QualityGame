@@ -215,7 +215,32 @@ Schnell wendest Du Dich wieder Deiner Arbeit zu.
             checkSzenError(x,sID,wahl2)
 
             print("""
-endlich weiterarbeiten!(+Produktivität; -Antw-rate i. soz. Med.):
+endlich weiterarbeiten!(+Produktivität; -Antw-rate i. sodef szenario1():
+    sID=1 # szenario ID
+    if c.level<2:
+        return 2
+    
+    print("Du kommst nach Hause. Was machst du?\n1) Dich entspannen und Chips essen\n2) An Deinem Buch weiterschreiben\n3) Dein Everyone Profil updaten")
+    wahl=int(input("> "))
+
+    if wahl==1:
+        x=c.addPunkte("disziplin",-5)
+    elif wahl==2:
+        x=c.addPunkte("gesundheit",-3)
+    elif wahl==3:
+        x=c.addPunkte("antwortgeschwindigkeit",5)
+    else:
+        errorWahlSzenario(sID,wahl)
+        return 1
+    
+    if x==0:
+        return 0
+    elif x==1:
+        errorSzenario(sID,wahl)
+    else:
+        undefError(sID,x)
+    
+    return 0z. Med.):
 Du schüttelst den Kopf und bleibst eisern.
 Auch wenn die Versuchung schon groß ist….
             """)
@@ -311,3 +336,85 @@ Schnell wendest Du Dich wieder Deiner Arbeit zu.
         return 1
 
 # Szenario 3 ##########################################################################################################
+
+def szenario3():
+    sID=3 # szenario ID
+    if c.level<2:
+        return 2
+    
+    
+        
+    
+    
+
+    print("""
+Du hockst wie so oft daheim auf der Couch, als Die Sendung, die Du gerade siehst, von Werbung unterbrochen wird. Unter anderem der des neuen Fitnessstudios. Hm… gut, ein bisschen Sport täte Dir sicher nicht schlecht!
+Andererseits ist die Couch auch so bequem…
+1) liegen bleiben
+2) Ab ins Gym!
+    """)
+
+    wahl1=int(input("> "))
+    c.update()
+
+    if wahl1==1:
+        x=c.addPunkte("gesundheit",-100)
+        checkSzenError(x,sID,wahl1)
+
+        x=c.addPunkte("sportlichkeit",-50)
+        checkSzenError(x,sID,wahl1)
+
+        x=c.addPunkte("disziplin",-50)
+        checkSzenError(x,sID,wahl1)
+
+        x=c.addPunkte("produktivität",-20)
+        checkSzenError(x,sID,wahl1)
+
+        x=c.addPunkte("bmi",-20)
+        checkSzenError(x,sID,wahl1)
+
+        x=c.addPunkte("sexappeal",-10)
+        checkSzenError(x,sID,wahl1)
+
+        x=c.addPunkte("lebenserwartung",-10)
+        checkSzenError(x,sID,wahl1)
+
+
+        print("""
+liegen bleiben (-Gesundheit, -Sportlichkeit, -Produktivität, -Sexappeal, -BMI,  -Lebenserwartung, -Disziplin)
+So bleibst Du also lieber entspannt in der Couch hängen, statt etwas Sport zu treiben - fauler Sack!
+        """)
+
+    elif wahl1==2:
+
+        x=c.addPunkte("lebenserwartung",+100)
+        checkSzenError(x,sID,wahl1)
+
+        x=c.addPunkte("produktivität",+50)
+        checkSzenError(x,sID,wahl1)
+        
+        print("""
+Ab ins Gym! (+Produktivität, +Disziplin)
+Mit ein bisschen Selbstdisziplin stemmst Du Dich aus der Couch und begibst Dich auf den Weg zum Fitnessstudio.
+Vor der Haustüre erwartet Dich bereits eine Passagierdrohne, schnellst huschst Du aus der Eingangstüre des Hauses in diese, um der prallen, glühend heißen Sonne zu entgehen.
+Der Klimawandel. Wer hätte denn auch ahnen können, dass das noch so schlimm wird?!
+-
+Im Fitnessstudio angekommen, machst Du das, was man in einem Fitnessstudio eben so macht… Sport. Und das klappt auch ganz gut! … wenn man eine Horde visueller Zombies im Rücken hat.
+(+Gesundheit, +Sportlichkeit, +Sexappeal, +BMI, +Lebenserwartung)
+        """)
+
+    else:
+        errorWahlSzenario(sID,wahl)
+        return 1
+
+
+
+
+    if x==0:
+        return 0
+    elif x==1:
+        errorSzenario(sID,wahl)
+    else:
+        undefError(sID,x)
+    
+    return 0

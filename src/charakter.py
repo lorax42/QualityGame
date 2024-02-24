@@ -204,10 +204,31 @@ def setLevel():
 
     return 0
 
+def levelUp(level):
+    print("+++ Du bist Aufgestiegen!!! +++\nDir stehen neue Türen offen...")
+
+def levelDown(level):
+    print("--- Du bist Abgestiegen!!! ---\nDas wirst du auf ewig bereuen...")
+
+def levelStay(level):
+    print("=== Du bist Abgestiegen!!! ===\nDas ist fast so schlimm, wie Abstieg... du willst mehr!")
+
 def update():
+    global level
+    clevel=level
+
     u.clear() # Terminal reinigen
     setPunkte() # berechnet die Punkte neu
     setLevel() # berechnet das Level neu
+
+    if int(clevel) < int(level):
+        levelUp(level)
+    
+    elif int(clevel) > int(level):
+        levelDown(level)
+    
+    else:
+        levelStay(level)
     
     # Situation anzeigen
     print(vorname,name)
