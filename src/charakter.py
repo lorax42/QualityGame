@@ -1,7 +1,14 @@
 import time
 import random
+import sys
 
 import utils as u
+
+# set debug
+if len(sys.argv)>1 and sys.argv[1]=='d':
+    DEBUG=1
+else:
+    DEBUG=0
 
 # Attribute
 name=""
@@ -223,8 +230,9 @@ def update():
     # Situation anzeigen
     print(vorname,name)
     print("Level:",int(level))
-    print("Punkte:",punkte)
-    # print("###",runde)
+    if DEBUG:
+        print("Punkte:",punkte)
+    #print("###",runde)
     print()
 
     if int(clevel) < int(level):
