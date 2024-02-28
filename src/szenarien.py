@@ -348,7 +348,7 @@ def szenario3():
     
 
     print("""
-Du hockst wie so oft daheim auf der Couch, als Die Sendung, die Du gerade siehst, von Werbung unterbrochen wird.
+Du hockst wie so oft daheim auf der Couch, als die Sendung, die Du gerade siehst, von Werbung unterbrochen wird.
 Unter anderem der des neuen Fitnessstudios. Hm… gut, ein bisschen Sport täte Dir sicher nicht schlecht!
 Andererseits ist die Couch auch so bequem…
 1) liegen bleiben
@@ -402,6 +402,8 @@ Der Klimawandel. Wer hätte denn auch ahnen können, dass das noch so schlimm wi
 Im Fitnessstudio angekommen, machst Du das, was man in einem Fitnessstudio eben so macht… Sport. Und das klappt auch ganz gut!
 … wenn man eine Horde visueller Zombies im Rücken hat.
         """)
+
+        input()
 
 
         x=c.addPunkte("sportlichkeit",50)
