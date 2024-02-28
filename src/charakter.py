@@ -231,7 +231,7 @@ def update():
     print(vorname,name)
     print("Level:",int(level))
     if DEBUG:
-        print("Punkte:",punkte)
+        print("Punkte:",int(punkte))
     #print("###",runde)
     print()
 
