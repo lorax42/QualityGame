@@ -1,8 +1,8 @@
 # QualityGame ist ein Spiel von Robin Ulke und Lloyd Bush, basierend auf den Büchern des Marc-Uwe Kling.
 # Es ist frei unter https://www.github.com/lloydbush/QualityGame zu finden.
 # Wir freuen uns auch zukünftig über Beteiligung am Projekt.
-# Dieses Projekt steht unter der MIT-Lizenz. Mit dem source code dieses Spiels müsstest du eine Kopie erhalten haben,
-# falls nicht ist sie unter https://mit-license.org zu finden.
+# Dieses Projekt steht unter der MIT-Lizenz.
+# Mit dem source code dieses Spiels müsstest du eine Kopie erhalten haben, falls nicht ist sie unter https://mit-license.org zu finden.
 
 import time
 import os
@@ -73,7 +73,7 @@ print()
 # Geschichte beenden
 print("Du wirst von einer Bande nutzloser ermordet.")
 
-if int(c.level >= 10):
+if int(c.level >= 15):
     print("Sie werden in kurzer Zeit gefasst und verurteilt.")
 else:
     print("Da dein Level zu niedrig war, hat die Polizei nach kurzer Zeit die Nachforschungen eingestellt.")
@@ -88,8 +88,8 @@ print("""
 QualityGame ist ein Spiel von Robin Ulke und Lloyd Bush, basierend auf den Büchern des Marc-Uwe Kling.
 Es ist frei unter https://www.github.com/lloydbush/QualityGame zu finden.
 Wir freuen uns auch zukünftig über Beteiligung am Projekt.
-Dieses Projekt steht unter der MIT-Lizenz. Mit dem source code dieses Spiels müsstest du eine Kopie erhalten haben,
-falls nicht ist sie unter https://mit-license.org zu finden.
+Dieses Projekt steht unter der MIT-Lizenz.
+Mit dem source code dieses Spiels müsstest du eine Kopie erhalten haben, falls nicht ist sie unter https://mit-license.org zu finden.
 """)
 
 time.sleep(5)
