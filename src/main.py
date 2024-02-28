@@ -34,7 +34,7 @@ runde=0 # Zähler
 while True:
     runde+=1 # Rundenanzähler inkrementieren
 
-    c.update()
+    c.update(runde)
     print("###",runde)
 
     time.sleep(1)
