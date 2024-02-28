@@ -220,7 +220,7 @@ def levelDown(level):
 def levelStay(level):
     print("=== Du bist gleich geblieben!!! ===\nDas ist fast so schlimm, wie Abstieg... du willst mehr!")
 
-def update(runde):
+def update():
     clevel=level
 
     u.clear() # Terminal reinigen
@@ -235,14 +235,11 @@ def update(runde):
     #print("###",runde)
     print()
 
-    if runde>1:
-        if int(clevel) < int(level):
-            levelUp(level)
-
-        elif int(clevel) > int(level):
-            levelDown(level)
-
-        else:
-            levelStay(level)
+    if int(clevel) < int(level):
+        levelUp(level)
+    elif int(clevel) > int(level):
+        levelDown(level)
+    else:
+        levelStay(level)
 
     print()
