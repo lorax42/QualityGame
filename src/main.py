@@ -1,5 +1,8 @@
 # QualityGame ist ein Spiel von Robin Ulke und Lloyd Bush, basierend auf den Büchern des Marc-Uwe Kling.
-# Dieses Projekt steht unter der MIT-Lizenz. Mit dem source code dieses Spiels müsstest du eine Kopie erhalten haben, falls nicht ist sie unter https://mit-license.org zu finden.
+# Es ist frei unter https://www.github.com/lloydbush/QualityGame zu finden.
+# Wir freuen uns auch zukünftig über Beteiligung am Projekt.
+# Dieses Projekt steht unter der MIT-Lizenz. Mit dem source code dieses Spiels müsstest du eine Kopie erhalten haben,
+# falls nicht ist sie unter https://mit-license.org zu finden.
 
 import time
 import os
@@ -21,8 +24,8 @@ u.clear() # Terminal reinigen
 u.logo()
 
 # Variablen setzen
-c.name=str(input("Dein Nachname: "))
-c.vorname=str(input("Dein Vorname: "))
+c.name=str(input("Dein Nachname:\t"))
+c.vorname=str(input("Dein Vorname:\t"))
 c.setUb(10) # setzt alle Werte von ub auf 10, also auch das durchschnittliche Level
 c.setPunkte() # berechnet die Punkte
 c.setLevel() # berechnet das Level
@@ -81,8 +84,13 @@ print()
 #time.sleep(5)
 input()
 
-print("QualityGame ist ein Spiel von Robin Ulke und Lloyd Bush, basierend auf den Büchern des Marc-Uwe Kling.")
-print("Dieses Projekt steht unter der MIT-Lizenz. Mit dem source code dieses Spiels müsstest du eine Kopie erhalten haben, falls nicht ist sie unter https://mit-license.org zu finden.")
+print("""
+QualityGame ist ein Spiel von Robin Ulke und Lloyd Bush, basierend auf den Büchern des Marc-Uwe Kling.
+Es ist frei unter https://www.github.com/lloydbush/QualityGame zu finden.
+Wir freuen uns auch zukünftig über Beteiligung am Projekt.
+Dieses Projekt steht unter der MIT-Lizenz. Mit dem source code dieses Spiels müsstest du eine Kopie erhalten haben,
+falls nicht ist sie unter https://mit-license.org zu finden.
+""")
 
 time.sleep(5)
 print("\nENDE")
