@@ -60,10 +60,13 @@ def szenario1():
 
     if wahl==1:
         x=c.addPunkte("disziplin",-10)
+        checkSzenError(x,sID,wahl)
     elif wahl==2:
         x=c.addPunkte("gesundheit",-30)
+        checkSzenError(x,sID,wahl)
     elif wahl==3:
-        x=c.addPunkte("antwortgeschwindigkeit",50)
+        x=c.addPunkte("antwortrate",50)
+        checkSzenError(x,sID,wahl)
     else:
         errorWahlSzenario(sID,wahl)
         return 1
@@ -153,10 +156,10 @@ Mhm… ein wenig Hunger hast Du ja schon. Und nun auch wesentlich gesünder!
 
             if wahl3==1:
 
-                x=c.addPunkte("konsumaufgeschlossenheit",50)
+                x=c.addPunkte("konsumaufgeschlossenheit",30)
                 checkSzenError(x,sID,wahl3)
 
-                x=c.addPunkte("geschmack",-20)
+                x=c.addPunkte("geschmack",-25)
                 checkSzenError(x,sID,wahl3)
 
                 x=c.addPunkte("gesundheit",-20)
