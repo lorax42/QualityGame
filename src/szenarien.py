@@ -115,7 +115,7 @@ Plötzlich vibriert Dein QualityPad und leuchtet auf, sodass Dein Blick zu ihm g
         checkSzenError(x,sID,wahl1)
 
         print("""
-Weiterarbeiten (+Produktivität; -Antw-rate i. soz. Med.):
+Weiterarbeiten:
 Du lässt Dich nicht beirren und drehst Dein QualityPad herum, sodass Dich das Leuchten nicht mehr ablenken kann.
 Mit neuem, entschlossenerem Tatendrang wendest Du Dich wieder Deiner Arbeit zu.
 Aber bist Du Dir da so sicher? Vielleicht hat Deine Nachbarin einen neuen Wellensittich und wenn Du jetzt nicht nachschaust
@@ -137,7 +137,7 @@ Vielleicht sind es aber auch nur Deine Eltern, die wissen wollen wie es Dir geht
             checkSzenError(x,sID,wahl2)
 
             print("""
-Öffnen (+Antw.rate i. soz. Med.; -Produktivität):
+Öffnen:
 Du nimmst das QualityPad und öffnest die Nachricht - irgendetwas auf Everybody.
 Nach einem kurzen Moment öffnet sich die App und Du kannst den Text der Nachricht lesen:
 “heute gemüseauflauf! nice!”. Wieder irgend so ein Thermomixer… Du schüttelst genervt den Kopf.
@@ -172,7 +172,7 @@ Mhm… ein wenig Hunger hast Du ja schon. Und nun auch wesentlich gesünder!
                 checkSzenError(x,sID,wahl3)
 
                 print("""
-Die Fesazus bestellen (+Aufgeschl. gg. neuen Kons.angeb; .-Geschmack; -Gesundheit; -Sexappeal; -BMI; -Lebenserwartung):
+Die Fesazus bestellen:
 Du bestellst die Fesazus und wartest ungeduldig die zehn Sekunden, bis die Lieferdrohne an
 Deinem Bürofenster angekommen ist, ehe Du Dich genüsslich über die Snacks hermachst. …
                 """)
@@ -189,7 +189,7 @@ Deinem Bürofenster angekommen ist, ehe Du Dich genüsslich über die Snacks her
                 checkSzenError(x,sID,wahl3)
 
                 print("""
-endlich weiterarbeiten! (+Produktivität; -Aufgeschl. gg. neuen Kons.angeb.):
+endlich weiterarbeiten!:
 Du schüttelst den Kopf: “Wie kann nur so ungesund leben?!”.
 So bleibst Du eisern und verfällst nicht der Versuchung, sondern kümmerst Dich weiter um Deinen Job.
 -
@@ -215,32 +215,7 @@ Schnell wendest Du Dich wieder Deiner Arbeit zu.
             checkSzenError(x,sID,wahl2)
 
             print("""
-endlich weiterarbeiten!(+Produktivität; -Antw-rate i. sodef szenario1():
-    sID=1 # szenario ID
-    if c.level<2:
-        return 2
-    
-    print("Du kommst nach Hause. Was machst du?\n1) Dich entspannen und Chips essen\n2) An Deinem Buch weiterschreiben\n3) Dein Everyone Profil updaten")
-    wahl=int(input("> "))
-
-    if wahl==1:
-        x=c.addPunkte("disziplin",-5)
-    elif wahl==2:
-        x=c.addPunkte("gesundheit",-3)
-    elif wahl==3:
-        x=c.addPunkte("antwortgeschwindigkeit",5)
-    else:
-        errorWahlSzenario(sID,wahl)
-        return 1
-    
-    if x==0:
-        return 0
-    elif x==1:
-        errorSzenario(sID,wahl)
-    else:
-        undefError(sID,x)
-    
-    return 0z. Med.):
+endlich weiterarbeiten!:
 Du schüttelst den Kopf und bleibst eisern.
 Auch wenn die Versuchung schon groß ist….
             """)
