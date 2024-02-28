@@ -189,7 +189,7 @@ Deinem Bürofenster angekommen ist, ehe Du Dich genüsslich über die Snacks her
                 checkSzenError(x,sID,wahl3)
 
                 print("""
-endlich weiterarbeiten!:
+Endlich weiterarbeiten!:
 Du schüttelst den Kopf: “Wie kann nur so ungesund leben?!”.
 So bleibst Du eisern und verfällst nicht der Versuchung, sondern kümmerst Dich weiter um Deinen Job.
 -
@@ -362,10 +362,10 @@ So bleibst Du also lieber entspannt in der Couch hängen, statt etwas Sport zu t
 
     elif wahl1==2:
 
-        x=c.addPunkte("lebenserwartung",+100)
+        x=c.addPunkte("lebenserwartung",50)
         checkSzenError(x,sID,wahl1)
 
-        x=c.addPunkte("produktivität",+50)
+        x=c.addPunkte("produktivität",50)
         checkSzenError(x,sID,wahl1)
         
         print("""
