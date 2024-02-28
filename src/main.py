@@ -68,9 +68,7 @@ print()
 
 # offene Enden aufheben
 # Geschichte beenden
-print("""
-Du wirst von einer Bande nutzloser ermordet.
-""")
+print("Du wirst von einer Bande nutzloser ermordet.")
 
 if int(c.level >= 10):
     print("Sie werden in kurzer Zeit gefasst und verurteilt.")
@@ -80,7 +78,9 @@ else:
 print()
 
 # Abspann
-time.sleep(5)
+#time.sleep(5)
+input()
+
 print("QualityGame ist ein Spiel von Robin Ulke und Lloyd Bush, basierend auf den Büchern des Marc-Uwe Kling.")
 print("Dieses Projekt steht unter der MIT-Lizenz. Mit dem source code dieses Spiels müsstest du eine Kopie erhalten haben, falls nicht ist sie unter https://mit-license.org zu finden.")
 
