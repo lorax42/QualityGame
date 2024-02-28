@@ -379,6 +379,7 @@ Im Fitnessstudio angekommen, machst Du das, was man in einem Fitnessstudio eben 
         """)
 
         input()
+        c.update()
 
 
         x=c.addPunkte("sportlichkeit",50)
@@ -395,6 +396,8 @@ Im Fitnessstudio angekommen, machst Du das, was man in einem Fitnessstudio eben 
 
         x=c.addPunkte("bmi",10)
         checkSzenError(x,sID,wahl1)
+
+        c.update()
 
     else:
         errorWahlSzenario(sID,wahl1)
