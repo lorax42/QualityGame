@@ -407,3 +407,68 @@ Im Fitnessstudio angekommen, machst Du das, was man in einem Fitnessstudio eben 
         return 1
     
     return 0
+
+# Szenario 4 ##########################################################################################################
+
+def szenario4():
+    sID=3 # szenario ID
+    if c.level<2:
+        return 2
+
+
+    print("""
+Auf der Suche nach einem Abendessen schlenderst Du durch die Straßen von Quality City.
+- Das ist natürlich quatsch. Wer schlendert denn bitteschön noch durch Straßen, um ein Restaurant zu suchen?
+Dein Ohrwurm hat Dir eine Adresse mit einem Deinem Geschmack und Deinem Kontostand entsprechenden Etablissement ausgegeben, zu der Dich nun eines der selbstfahrenden Autos fährt.
+-
+Als Du aus dem Fenster blickst, siehst Du ein schickes und teuer aussehendes Level-40 Restaurant. Beneidenswert - aber so teuer wie es aussieht, ist es auch und mit Deinem Level kommst Du da eh nicht rein.
+-
+Du kommst an und steigst aus dem Auto aus - welches Dich gar nicht um eine Bewertung bittet?
+Das muss der letzte Levelaufstieg mitgebracht haben, Nice!
+Du willst gerade das Restaurant betreten, als Dein Blick ein paar Häuserfassaden weiter auf ein anderes, neues fällt. Ein im Vergleich zu diesem hier doch deutlich schickeres! … aber auch nur für Level %d. Und entsprechend Teuer - also eigentlich nichts für Deinen begrenztes Konto. Eigentlich…
+1) In das für Dich empfohlene Restaurant gehen
+2) Dir heute mal etwas gönnen!
+    """ %(int(c.level)))
+
+    wahl=int(input("> "))
+    c.update()
+
+    if wahl==1:
+
+        x=c.addPunkte("disziplin",50)
+        checkSzenError(x,sID,wahl)
+
+        x=c.addPunkte("zuverlässigkeit",50)
+        checkSzenError(x,sID,wahl)
+
+        print("""
+In das für Dich empfohlene Restaurant gehen:
+Du betrittst also das Restraurant und setzt Dich an einen freien Tisch. Der Roboter-Kellner bringt Dir auch sogleich das zu Dir passendste Gericht - Surstömming. Wie kommt das System nur darauf?! 
+Naja, inzwischen konntest Du Dich immerhin daran gewöhnen… und irgendwo schmeckt es ja sogar! Vielleicht. Aber das System wird schon recht haben.
+        """)
+
+    elif wahl==2:
+
+        x=c.addPunkte("begeisterungsfähigkeit",50)
+        checkSzenError(x,sID,wahl)
+
+        x=c.addPunkte("konsumaufgeschlossenheit",50)
+        checkSzenError(x,sID,wahl)
+
+        x=c.addPunkte("geschmack",50)
+        checkSzenError(x,sID,wahl)
+
+        x=c.addPunkte("vermögen",50)
+        checkSzenError(x,sID,wahl)
+
+        print("""
+Dir heute mal etwas gönnen!:
+Du betrittst also das Restraurant und setzt Dich an einen freien Tisch. Der Roboter-Kellner bringt Dir auch sogleich das zu Dir passendste Gericht - Surstömming. Wie kommt das System nur darauf?! 
+Naja, inzwischen konntest Du Dich immerhin daran gewöhnen… und irgendwo schmeckt es ja sogar! Vielleicht. Aber das System wird schon recht haben.
+        """)
+
+    else:
+        errorWahlSzenario(sID,wahl)
+        return 1
+    
+    return 0
