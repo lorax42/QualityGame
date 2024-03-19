@@ -1,7 +1,15 @@
 import random
+import sys
 
 import charakter as c
 import utils as u
+
+# set debug
+if len(sys.argv)>1 and sys.argv[1]=='d':
+    DEBUG=1
+    i=0 # debug see szenario()
+else:
+    DEBUG=0
 
 # ERROR: undefinierte Wahl eines Szenarios
 def errorWahlSzenario(szenario,wahl):
@@ -30,6 +38,16 @@ def szenario():
 
     szenarien=[szenario1,szenario2,szenario3] # liste der Szenarien
     szen=random.choice(szenarien) # szen ist ein zufälliges Szenario
+
+    # in Reihenfolge ablaufen
+    if DEBUG==1:
+        global i
+
+        if i==len(szenarien):
+            i=0
+        szen=szenarien[i]
+        i+=1
+
     x=szen() # szen wird ausgeführt
     
     # Error checking
