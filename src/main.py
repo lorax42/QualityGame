@@ -22,6 +22,8 @@ u.clear() # Terminal reinigen
 
 # Charakter und Umfeld aufstellen
 u.logo()
+if c.DEBUG==1:
+    print("\t\t\t!!! DEBUG MODE !!!\n")
 
 # Variablen setzen
 c.name=str(input("Dein Nachname:\t"))
