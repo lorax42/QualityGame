@@ -94,7 +94,8 @@ Dieses Projekt steht unter der MIT-Lizenz.
 Mit dem source code dieses Spiels müsstest du eine Kopie erhalten haben, falls nicht ist sie unter https://mit-license.org zu finden.
 """)
 
-time.sleep(5)
+input()
+
 print("\nENDE")
 u.logMssg("ENDE",0,0)
 
