@@ -39,7 +39,7 @@ c.setLevel() # berechnet das Level
 runde=0 # Zähler
 while True:
     runde+=1 # Rundenanzähler inkrementieren
-    #playsound("media/message.mp3")
+    playsound("media/message.mp3")
 
     c.update()
     print("###",runde)
@@ -62,6 +62,7 @@ while True:
         break
 
 # CLEANUP
+playsound("media/game-over.mp3")
 
 u.clear() # Terminal reinigen
 u.logo()

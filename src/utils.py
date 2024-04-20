@@ -1,8 +1,12 @@
 import datetime
 import os
+from playsound import playsound
 
 # Lognachricht schreiben
 def logMssg(message,error,p):
+    if message != "START":
+        playsound("media/error.mp3")
+
     message=str(message)
     error=str(error)
     p=int(p)

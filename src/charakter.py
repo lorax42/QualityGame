@@ -6,10 +6,9 @@ from playsound import playsound
 import utils as u
 
 # set debug
+DEBUG=0
 if len(sys.argv)>1 and sys.argv[1]=='d':
     DEBUG=1
-else:
-    DEBUG=0
 
 # Attribute
 name=""
@@ -214,11 +213,11 @@ def setLevel():
 
 def levelUp(level):
     print("+++ Du bist Aufgestiegen!!! +++\nDir stehen neue Türen offen...")
-    #playsound("media/level-up.mp3")
+    playsound("media/level-up.mp3")
 
 def levelDown(level):
     print("--- Du bist Abgestiegen!!! ---\nDas wirst du auf ewig bereuen...")
-    #playsound("media/fail.mp3")
+    playsound("media/fail.mp3")
 
 def levelStay(level):
     print("=== Du bist gleich geblieben!!! ===\nDas ist fast so schlimm, wie Abstieg... du brauchst mehr!")
