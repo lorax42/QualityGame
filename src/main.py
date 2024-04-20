@@ -6,6 +6,7 @@
 
 import time
 import os
+from playsound import playsound
 
 import charakter as c
 import szenarien as s
@@ -38,6 +39,7 @@ c.setLevel() # berechnet das Level
 runde=0 # Zähler
 while True:
     runde+=1 # Rundenanzähler inkrementieren
+    #playsound("media/message.mp3")
 
     c.update()
     print("###",runde)
